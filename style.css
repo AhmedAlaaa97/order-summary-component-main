@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+--pale-blue: hsl(225, 100%, 94%);
+--bright-blue: hsl(245, 75%, 52%);
+--very-pale-blue: hsl(225, 100%, 98%);
+--desaturated-blue: hsl(224, 23%, 55%);
+--dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--pale-blue) ;
+
+}
+.bckground {
+    height: 450px;
+    background: url(./images/pattern-background-desktop.svg) no-repeat center/cover;
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+main {
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    width: 400px;
+    height: 630px;
+    text-align: center;
+    border-radius: 20px;
+}
+.img {
+    height: 195px;
+    background-image: url(./images/illustration-hero.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 20px 20px 0px 0px;
+}
+.text {
+    text-align: center;
+    padding: 40px 20px 0px 20px;
+}
+.text h2 {
+    color:hsl(223, 47%, 23%);
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+.text p {
+    color: hsl(224, 23%, 55%);
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+.music {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--very-pale-blue);
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+}
+.music-text p:first-child {
+    color:hsl(223, 47%, 23%);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.music-text p:last-child {
+    color:var(--desaturated-blue);
+}
+.music-content {
+    display: flex;
+    gap: 20px;
+}
+.music button {
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    background-color: var(--bright-pale-blue);
+    color : var(--bright-blue);
+    text-decoration: underline;
+}
+.music button:hover {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.footer button {
+        width: 90%;
+        border: none;
+        border-radius: 15px;
+        background-color: var(--bright-blue);
+        padding: 15px;
+        font-weight: bold;
+        color:white;
+        font-size: 15px;
+        margin-top : 25px;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.footer button:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+
+.footer p {
+    color : var(--desaturated-blue);
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.footer p:hover {
+    color : black;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) { 
+    .bckground {
+        background-image: url('./images/pattern-background-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: center/cover;
+        height: 300px;
+    }
+    main {
+        max-height: calc(100vh - 300px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 150px 20px;
+    }
+    .text {
+        padding:15px;
+    }
+    .card {
+        height: 600px;
+    }
+}
